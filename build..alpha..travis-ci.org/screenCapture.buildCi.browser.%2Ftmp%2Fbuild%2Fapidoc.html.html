@@ -1,0 +1,1032 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://babeljs.io/">babel-preset-env (v1.4.0)</a>
+</h1>
+<h4>A Babel preset for each environment.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-env">module babel-preset-env</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">babel-preset-env.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.default">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>default
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.getCurrentNodeVersion">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>getCurrentNodeVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.getTargets">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>getTargets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.isPluginRequired">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>isPluginRequired
+            <span class="apidocSignatureSpan">(supportedEnvironments, plugin)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.transformIncludesAndExcludes">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>transformIncludesAndExcludes
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-preset-env.</span>normalize_options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-preset-env.</span>transform_polyfill_require_plugin</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-env.default">module babel-preset-env.default</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.default.default">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>default
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-env.getCurrentNodeVersion">module babel-preset-env.getCurrentNodeVersion</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.getCurrentNodeVersion.getCurrentNodeVersion">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>getCurrentNodeVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-env.getTargets">module babel-preset-env.getTargets</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.getTargets.getTargets">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>getTargets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-env.isPluginRequired">module babel-preset-env.isPluginRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.isPluginRequired.isPluginRequired">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>isPluginRequired
+            <span class="apidocSignatureSpan">(supportedEnvironments, plugin)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-env.normalize_options">module babel-preset-env.normalize_options</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.checkDuplicateIncludeExcludes">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>checkDuplicateIncludeExcludes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.default">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>default
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.normalizePluginName">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>normalizePluginName
+            <span class="apidocSignatureSpan">(plugin)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.normalizePluginNames">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>normalizePluginNames
+            <span class="apidocSignatureSpan">(plugins)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.validateBoolOption">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateBoolOption
+            <span class="apidocSignatureSpan">(name, value, defaultValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.validateIncludesAndExcludes">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateIncludesAndExcludes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.validateLooseOption">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateLooseOption
+            <span class="apidocSignatureSpan">(looseOpt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.validateModulesOption">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateModulesOption
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.normalize_options.validateSpecOption">
+            function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateSpecOption
+            <span class="apidocSignatureSpan">(specOpt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-env.transformIncludesAndExcludes">module babel-preset-env.transformIncludesAndExcludes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.transformIncludesAndExcludes.transformIncludesAndExcludes">
+            function <span class="apidocSignatureSpan">babel-preset-env.</span>transformIncludesAndExcludes
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-env.transform_polyfill_require_plugin">module babel-preset-env.transform_polyfill_require_plugin</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">babel-preset-env.transform_polyfill_require_plugin.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-env.transform_polyfill_require_plugin.default">
+            function <span class="apidocSignatureSpan">babel-preset-env.transform_polyfill_require_plugin.</span>default
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-env" id="apidoc.module.babel-preset-env">module babel-preset-env</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.default" id="apidoc.element.babel-preset-env.default">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>default
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildPreset(context) {
+  var opts = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+
+  var validatedOptions = (0, _normalizeOptions2.default)(opts);
+  var debug = validatedOptions.debug,
+      loose = validatedOptions.loose,
+      moduleType = validatedOptions.moduleType,
+      spec = validatedOptions.spec,
+      useBuiltIns = validatedOptions.useBuiltIns;
+
+
+  var targets = getTargets(validatedOptions.targets);
+  var include = transformIncludesAndExcludes(validatedOptions.include);
+  var exclude = transformIncludesAndExcludes(validatedOptions.exclude);
+
+  var filterPlugins = filterItem.bind(null, targets, exclude.plugins, _plugins2.default);
+  var transformations = Object.keys(_plugins2.default).filter(filterPlugins).concat(include.plugins);
+
+  var polyfills = void 0;
+  var polyfillTargets = void 0;
+  if (useBuiltIns) {
+    polyfillTargets = getBuiltInTargets(targets);
+    var filterBuiltIns = filterItem.bind(null, polyfillTargets, exclude.builtIns, _builtIns2.default);
+    polyfills = Object.keys(_builtIns2.default).concat(getPlatformSpecificDefaultFor(polyfillTargets)).filter(filterBuiltIns).concat
+(include.builtIns);
+  }
+
+  if (debug &amp;&amp; !hasBeenLogged) {
+    hasBeenLogged = true;
+    console.log("babel-preset-env: `DEBUG` option");
+    console.log("\nUsing targets:");
+    console.log(JSON.stringify(targets, null, 2));
+    console.log("\nModules transform: " + moduleType);
+    console.log("\nUsing plugins:");
+    transformations.forEach(function (transform) {
+      logPlugin(transform, targets, _plugins2.default);
+    });
+    if (useBuiltIns &amp;&amp; polyfills.length) {
+      console.log("\nUsing polyfills:");
+      polyfills.forEach(function (polyfill) {
+        logPlugin(polyfill, polyfillTargets, _builtIns2.default);
+      });
+    }
+  }
+
+  var regenerator = transformations.indexOf("transform-regenerator") &gt;= 0;
+  var modulePlugin = moduleType !== false &amp;&amp; _moduleTransformations2.default[moduleType];
+  var plugins = [];
+
+  // NOTE: not giving spec here yet to avoid compatibility issues when
+  // babel-plugin-transform-es2015-modules-commonjs gets its spec mode
+  modulePlugin &amp;&amp; plugins.push([require("babel-plugin-" + modulePlugin), { loose: loose }]);
+
+  plugins.push.apply(plugins, transformations.map(function (pluginName) {
+    return [require("babel-plugin-" + pluginName), { spec: spec, loose: loose }];
+  }));
+
+  useBuiltIns &amp;&amp; plugins.push([_transformPolyfillRequirePlugin2.default, { polyfills: polyfills, regenerator: regenerator }]);
+
+  return {
+    plugins: plugins
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.getCurrentNodeVersion" id="apidoc.element.babel-preset-env.getCurrentNodeVersion">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>getCurrentNodeVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCurrentNodeVersion() {
+  return parseFloat(process.versions.node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.getTargets" id="apidoc.element.babel-preset-env.getTargets">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>getTargets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTargets() {
+  var targets = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+
+  var targetOpts = _extends({}, targets);
+
+  if (targetOpts.node === true || targetOpts.node === "current") {
+    targetOpts.node = getCurrentNodeVersion();
+  }
+
+  if (typeof targetOpts.electron === "string") {
+    targetOpts.electron = parseFloat(targetOpts.electron);
+  }
+
+  if (targetOpts.hasOwnProperty("uglify") &amp;&amp; !targetOpts.uglify) {
+    delete targetOpts.uglify;
+  }
+
+  var browserOpts = targetOpts.browsers;
+  if (isBrowsersQueryValid(browserOpts)) {
+    var queryBrowsers = getLowestVersions((0, _browserslist2.default)(browserOpts));
+    return mergeBrowsers(queryBrowsers, targetOpts);
+  }
+  return targetOpts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.isPluginRequired" id="apidoc.element.babel-preset-env.isPluginRequired">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>isPluginRequired
+        <span class="apidocSignatureSpan">(supportedEnvironments, plugin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isPluginRequired(supportedEnvironments, plugin) {
+  if (supportedEnvironments.browsers) {
+    supportedEnvironments = getTargets(supportedEnvironments);
+  }
+
+  var targetEnvironments = Object.keys(supportedEnvironments);
+
+  if (targetEnvironments.length === 0) {
+    return true;
+  }
+
+  var isRequiredForEnvironments = targetEnvironments.filter(function (environment) {
+    // Feature is not implemented in that environment
+    if (!plugin[environment]) {
+      return true;
+    }
+
+    var lowestImplementedVersion = plugin[environment];
+    var lowestTargetedVersion = supportedEnvironments[environment];
+
+    if (typeof lowestTargetedVersion === "string") {
+      throw new Error("Target version must be a number,\n          '" + lowestTargetedVersion + "' was given for '" + environment
+ + "'");
+    }
+
+    return lowestTargetedVersion &lt; lowestImplementedVersion;
+  });
+
+  return isRequiredForEnvironments.length &gt; 0 ? true : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.transformIncludesAndExcludes" id="apidoc.element.babel-preset-env.transformIncludesAndExcludes">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>transformIncludesAndExcludes
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformIncludesAndExcludes(opts) {
+  return {
+    all: opts,
+    plugins: opts.filter(function (opt) {
+      return !opt.match(/^(es\d+|web)\./);
+    }),
+    builtIns: opts.filter(function (opt) {
+      return opt.match(/^(es\d+|web)\./);
+    })
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-env.default" id="apidoc.module.babel-preset-env.default">module babel-preset-env.default</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.default.default" id="apidoc.element.babel-preset-env.default.default">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>default
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildPreset(context) {
+  var opts = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+
+  var validatedOptions = (0, _normalizeOptions2.default)(opts);
+  var debug = validatedOptions.debug,
+      loose = validatedOptions.loose,
+      moduleType = validatedOptions.moduleType,
+      spec = validatedOptions.spec,
+      useBuiltIns = validatedOptions.useBuiltIns;
+
+
+  var targets = getTargets(validatedOptions.targets);
+  var include = transformIncludesAndExcludes(validatedOptions.include);
+  var exclude = transformIncludesAndExcludes(validatedOptions.exclude);
+
+  var filterPlugins = filterItem.bind(null, targets, exclude.plugins, _plugins2.default);
+  var transformations = Object.keys(_plugins2.default).filter(filterPlugins).concat(include.plugins);
+
+  var polyfills = void 0;
+  var polyfillTargets = void 0;
+  if (useBuiltIns) {
+    polyfillTargets = getBuiltInTargets(targets);
+    var filterBuiltIns = filterItem.bind(null, polyfillTargets, exclude.builtIns, _builtIns2.default);
+    polyfills = Object.keys(_builtIns2.default).concat(getPlatformSpecificDefaultFor(polyfillTargets)).filter(filterBuiltIns).concat
+(include.builtIns);
+  }
+
+  if (debug &amp;&amp; !hasBeenLogged) {
+    hasBeenLogged = true;
+    console.log("babel-preset-env: `DEBUG` option");
+    console.log("\nUsing targets:");
+    console.log(JSON.stringify(targets, null, 2));
+    console.log("\nModules transform: " + moduleType);
+    console.log("\nUsing plugins:");
+    transformations.forEach(function (transform) {
+      logPlugin(transform, targets, _plugins2.default);
+    });
+    if (useBuiltIns &amp;&amp; polyfills.length) {
+      console.log("\nUsing polyfills:");
+      polyfills.forEach(function (polyfill) {
+        logPlugin(polyfill, polyfillTargets, _builtIns2.default);
+      });
+    }
+  }
+
+  var regenerator = transformations.indexOf("transform-regenerator") &gt;= 0;
+  var modulePlugin = moduleType !== false &amp;&amp; _moduleTransformations2.default[moduleType];
+  var plugins = [];
+
+  // NOTE: not giving spec here yet to avoid compatibility issues when
+  // babel-plugin-transform-es2015-modules-commonjs gets its spec mode
+  modulePlugin &amp;&amp; plugins.push([require("babel-plugin-" + modulePlugin), { loose: loose }]);
+
+  plugins.push.apply(plugins, transformations.map(function (pluginName) {
+    return [require("babel-plugin-" + pluginName), { spec: spec, loose: loose }];
+  }));
+
+  useBuiltIns &amp;&amp; plugins.push([_transformPolyfillRequirePlugin2.default, { polyfills: polyfills, regenerator: regenerator }]);
+
+  return {
+    plugins: plugins
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-env.getCurrentNodeVersion" id="apidoc.module.babel-preset-env.getCurrentNodeVersion">module babel-preset-env.getCurrentNodeVersion</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.getCurrentNodeVersion.getCurrentNodeVersion" id="apidoc.element.babel-preset-env.getCurrentNodeVersion.getCurrentNodeVersion">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>getCurrentNodeVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCurrentNodeVersion() {
+  return parseFloat(process.versions.node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-env.getTargets" id="apidoc.module.babel-preset-env.getTargets">module babel-preset-env.getTargets</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.getTargets.getTargets" id="apidoc.element.babel-preset-env.getTargets.getTargets">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>getTargets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTargets() {
+  var targets = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+
+  var targetOpts = _extends({}, targets);
+
+  if (targetOpts.node === true || targetOpts.node === "current") {
+    targetOpts.node = getCurrentNodeVersion();
+  }
+
+  if (typeof targetOpts.electron === "string") {
+    targetOpts.electron = parseFloat(targetOpts.electron);
+  }
+
+  if (targetOpts.hasOwnProperty("uglify") &amp;&amp; !targetOpts.uglify) {
+    delete targetOpts.uglify;
+  }
+
+  var browserOpts = targetOpts.browsers;
+  if (isBrowsersQueryValid(browserOpts)) {
+    var queryBrowsers = getLowestVersions((0, _browserslist2.default)(browserOpts));
+    return mergeBrowsers(queryBrowsers, targetOpts);
+  }
+  return targetOpts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-env.isPluginRequired" id="apidoc.module.babel-preset-env.isPluginRequired">module babel-preset-env.isPluginRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.isPluginRequired.isPluginRequired" id="apidoc.element.babel-preset-env.isPluginRequired.isPluginRequired">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>isPluginRequired
+        <span class="apidocSignatureSpan">(supportedEnvironments, plugin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isPluginRequired(supportedEnvironments, plugin) {
+  if (supportedEnvironments.browsers) {
+    supportedEnvironments = getTargets(supportedEnvironments);
+  }
+
+  var targetEnvironments = Object.keys(supportedEnvironments);
+
+  if (targetEnvironments.length === 0) {
+    return true;
+  }
+
+  var isRequiredForEnvironments = targetEnvironments.filter(function (environment) {
+    // Feature is not implemented in that environment
+    if (!plugin[environment]) {
+      return true;
+    }
+
+    var lowestImplementedVersion = plugin[environment];
+    var lowestTargetedVersion = supportedEnvironments[environment];
+
+    if (typeof lowestTargetedVersion === "string") {
+      throw new Error("Target version must be a number,\n          '" + lowestTargetedVersion + "' was given for '" + environment
+ + "'");
+    }
+
+    return lowestTargetedVersion &lt; lowestImplementedVersion;
+  });
+
+  return isRequiredForEnvironments.length &gt; 0 ? true : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-env.normalize_options" id="apidoc.module.babel-preset-env.normalize_options">module babel-preset-env.normalize_options</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.checkDuplicateIncludeExcludes" id="apidoc.element.babel-preset-env.normalize_options.checkDuplicateIncludeExcludes">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>checkDuplicateIncludeExcludes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkDuplicateIncludeExcludes() {
+  var include = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : [];
+  var exclude = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : [];
+
+  var duplicates = include.filter(function (opt) {
+    return exclude.indexOf(opt) &gt;= 0;
+  });
+
+  (0, _invariant2.default)(duplicates.length === 0, "Invalid Option: The plugins/built-ins '" + duplicates + "' were found in both
+ the\"include\" and\n    \"exclude\" options.");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.default" id="apidoc.element.babel-preset-env.normalize_options.default">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>default
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizeOptions(opts) {
+  // TODO: remove whitelist in favor of include in next major
+  if (opts.whitelist &amp;&amp; !hasBeenWarned) {
+    console.warn("Deprecation Warning: The \"whitelist\" option has been deprecated in favor of \"include\" to\n      match the
+newly added\"exclude\" option (instead of \"blacklist\").");
+    hasBeenWarned = true;
+  }
+
+  (0, _invariant2.default)(!(opts.whitelist &amp;&amp; opts.include), "Invalid Option: The \"whitelist\" and the \"include\" option are
+the same and one can be used at\n    a time");
+
+  if (opts.exclude) {
+    opts.exclude = normalizePluginNames(opts.exclude);
+  }
+
+  if (opts.whitelist || opts.include) {
+    opts.include = normalizePluginNames(opts.whitelist || opts.include);
+  }
+
+  checkDuplicateIncludeExcludes(opts.include, opts.exclude);
+
+  return {
+    debug: opts.debug,
+    exclude: validateIncludesAndExcludes(opts.exclude, "exclude"),
+    include: validateIncludesAndExcludes(opts.include, "include"),
+    loose: validateLooseOption(opts.loose),
+    moduleType: validateModulesOption(opts.modules),
+    spec: validateSpecOption(opts.spec),
+    targets: opts.targets,
+    useBuiltIns: opts.useBuiltIns
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.normalizePluginName" id="apidoc.element.babel-preset-env.normalize_options.normalizePluginName">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>normalizePluginName
+        <span class="apidocSignatureSpan">(plugin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizePluginName(plugin) {
+  return plugin.replace(/^babel-plugin-/, "");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.normalizePluginNames" id="apidoc.element.babel-preset-env.normalize_options.normalizePluginNames">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>normalizePluginNames
+        <span class="apidocSignatureSpan">(plugins)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizePluginNames(plugins) {
+  return plugins.map(normalizePluginName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.validateBoolOption" id="apidoc.element.babel-preset-env.normalize_options.validateBoolOption">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateBoolOption
+        <span class="apidocSignatureSpan">(name, value, defaultValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateBoolOption(name, value, defaultValue) {
+  if (typeof value === "undefined") {
+    value = defaultValue;
+  }
+
+  if (typeof value !== "boolean") {
+    throw new Error("Preset env: '" + name + "' option must be a boolean.");
+  }
+
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.validateIncludesAndExcludes" id="apidoc.element.babel-preset-env.normalize_options.validateIncludesAndExcludes">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateIncludesAndExcludes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateIncludesAndExcludes() {
+  var opts = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : [];
+  var type = arguments[1];
+
+  (0, _invariant2.default)(Array.isArray(opts), "Invalid Option: The '" + type + "' option must be an Array&lt;String&gt; of plugins/built
+-ins");
+
+  var unknownOpts = [];
+  opts.forEach(function (opt) {
+    if (validIncludesAndExcludes.indexOf(opt) === -1) {
+      unknownOpts.push(opt);
+    }
+  });
+
+  (0, _invariant2.default)(unknownOpts.length === 0, "Invalid Option: The plugins/built-ins '" + unknownOpts + "' passed to the '" +
+type + "' option are not\n    valid. Please check data/[plugin-features|built-in-features].js in babel-preset-env");
+
+  return opts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.validateLooseOption" id="apidoc.element.babel-preset-env.normalize_options.validateLooseOption">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateLooseOption
+        <span class="apidocSignatureSpan">(looseOpt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateLooseOption(looseOpt) {
+  return validateBoolOption("loose", looseOpt, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.validateModulesOption" id="apidoc.element.babel-preset-env.normalize_options.validateModulesOption">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateModulesOption
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateModulesOption() {
+  var modulesOpt = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : "commonjs";
+
+  (0, _invariant2.default)(modulesOpt === false || Object.keys(_moduleTransformations2.default).indexOf(modulesOpt) &gt; -1, "Invalid
+ Option: The 'modules' option must be either 'false' to indicate no modules, or a\n    module type which can be be one of: 'commonjs' (default), 'amd', 'umd', 'systemjs'.");
+
+  return modulesOpt;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.normalize_options.validateSpecOption" id="apidoc.element.babel-preset-env.normalize_options.validateSpecOption">
+        function <span class="apidocSignatureSpan">babel-preset-env.normalize_options.</span>validateSpecOption
+        <span class="apidocSignatureSpan">(specOpt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateSpecOption(specOpt) {
+  return validateBoolOption("spec", specOpt, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-env.transformIncludesAndExcludes" id="apidoc.module.babel-preset-env.transformIncludesAndExcludes">module babel-preset-env.transformIncludesAndExcludes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.transformIncludesAndExcludes.transformIncludesAndExcludes" id="apidoc.element.babel-preset-env.transformIncludesAndExcludes.transformIncludesAndExcludes">
+        function <span class="apidocSignatureSpan">babel-preset-env.</span>transformIncludesAndExcludes
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformIncludesAndExcludes(opts) {
+  return {
+    all: opts,
+    plugins: opts.filter(function (opt) {
+      return !opt.match(/^(es\d+|web)\./);
+    }),
+    builtIns: opts.filter(function (opt) {
+      return opt.match(/^(es\d+|web)\./);
+    })
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-env.transform_polyfill_require_plugin" id="apidoc.module.babel-preset-env.transform_polyfill_require_plugin">module babel-preset-env.transform_polyfill_require_plugin</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-env.transform_polyfill_require_plugin.default" id="apidoc.element.babel-preset-env.transform_polyfill_require_plugin.default">
+        function <span class="apidocSignatureSpan">babel-preset-env.transform_polyfill_require_plugin.</span>default
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (_ref) {
+  var t = _ref.types;
+
+  function createImportDeclaration(polyfill) {
+    var declar = t.importDeclaration([], t.stringLiteral(polyfill));
+    declar._blockHoist = 3;
+    return declar;
+  }
+
+  function createRequireStatement(polyfill) {
+    return t.expressionStatement(t.callExpression(t.identifier("require"), [t.stringLiteral(polyfill)]));
+  }
+
+  function isRequire(path) {
+    return t.isExpressionStatement(path.node) &amp;&amp; t.isCallExpression(path.node.expression) &amp;&amp; t.isIdentifier(path.node.expression
+.callee) &amp;&amp; path.node.expression.callee.name === "require" &amp;&amp; path.node.expression.arguments.length === 1 &amp;&amp; t.isStringLiteral(path
+.node.expression.arguments[0]) &amp;&amp; isPolyfillSource(path.node.expression.arguments[0].value);
+  }
+
+  function createImport(polyfill, requireType, core) {
+    if (core) {
+      polyfill = "core-js/modules/" + polyfill;
+    }
+
+    if (requireType === "import") {
+      return createImportDeclaration(polyfill);
+    } else {
+      return createRequireStatement(polyfill);
+    }
+  }
+
+  function createImports(polyfills, requireType, regenerator) {
+    var imports = polyfills.filter(function (el, i, arr) {
+      return arr.indexOf(el) === i;
+    }).map(function (polyfill) {
+      return createImport(polyfill, requireType, true);
+    });
+
+    return [].concat(imports, [regenerator &amp;&amp; createImport("regenerator-runtime/runtime", requireType)]).filter(Boolean);
+  }
+
+  var isPolyfillImport = {
+    ImportDeclaration: function ImportDeclaration(path, state) {
+      if (path.node.specifiers.length === 0 &amp;&amp; isPolyfillSource(path.node.source.value)) {
+        this.numPolyfillImports++;
+        if (this.numPolyfillImports &gt; 1) {
+          path.remove();
+          return;
+        }
+
+        path.replaceWithMultiple(createImports(state.opts.polyfills, "import", state.opts.regenerator));
+      }
+    },
+    Program: function Program(path, state) {
+      var _this = this;
+
+      if (!state.opts.polyfills) {
+        throw path.buildCodeFrameError("\nThere was an issue in \"babel-preset-env\" such that\nthe \"polyfills\" option was not
+ correctly passed\nto the \"transform-polyfill-require\" plugin\n");
+      }
+      path.get("body").forEach(function (bodyPath) {
+        if (isRequire(bodyPath)) {
+          _this.numPolyfillImports++;
+          if (_this.numPolyfillImports &gt; 1) {
+            path.remove();
+            return;
+          }
+
+          bodyPath.replaceWithMultiple(createImports(state.opts.polyfills, "require", state.opts.regenerator));
+        }
+      });
+    }
+  };
+
+  return {
+    name: "transform-polyfill-require",
+    visitor: isPolyfillImport,
+    pre: function pre() {
+      this.numPolyfillImports = 0;
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
